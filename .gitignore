@@ -1,0 +1,5 @@
+dist/
+node_modules/
+package.json
+quark-utils.js
+quark-utils.js.map
