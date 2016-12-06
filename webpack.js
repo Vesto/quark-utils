@@ -29,9 +29,9 @@ new webpack.Compiler.Watching(compiler, undefined, function(err, stats) {
     if (err) {
         console.log(prefix + "Error:", error);
     } else if (stats.hasErrors()) {
-        console.log(prefix + "Stats errors:", stats.errors);
+        console.log(prefix + "Stats errors:", stats.compilation.errors);
     } else if (stats.hasWarnings()) {
-        console.log(prefix + "Stats warnings:", stats.warnings);
+        console.log(prefix + "Stats warnings:", stats.compilation.errors);
     } else {
         console.log(prefix + "Compile complete.")
     }
