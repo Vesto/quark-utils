@@ -18,7 +18,7 @@ export class SourceMapUtil {
         this.consumer = new SourceMapConsumer(this.rawSourceMap);
     }
 
-    public originalPositionFor(line: number, column: number): MappedPosition {
+    public originalPositionFor(line: number, column: number): MappedPosition { // TODO: if line & column == 0, is internal error
         return this.consumer.originalPositionFor({line: line, column: column});
     }
 }
